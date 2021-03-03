@@ -7,7 +7,7 @@ token = os.getenv("DISCORD_BOT_TOKEN")
 
 @client.event
 async def on_ready() :
-    await client.change_presence(status = discord.Status.online, activity = discord.Watching("you use .help!"))
+    await client.change_presence(status = discord.Status.online, activity = discord.Game("Use .help for a list of commands"))
     print("I am online")
 
 @client.command()
@@ -22,6 +22,6 @@ async def whoami(ctx) :
 async def clear(ctx, amount=3) :
     await ctx.channel.purge(limit=amount)
 
-#webhook test
+#webhook
 
 client.run(token)
