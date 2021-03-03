@@ -23,4 +23,4 @@ async def clear(ctx, amount=3) :
     await ctx.channel.purge(limit=amount)
 
 
-client.run(TOKEN)
+client.run(token)
