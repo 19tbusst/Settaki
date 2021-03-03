@@ -1,0 +1,2 @@
+# Settaki
+Discord Bot
