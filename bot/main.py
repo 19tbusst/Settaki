@@ -35,9 +35,9 @@ async def flip(ctx):
         await  ctx.send("Tails!")
 
 @client.command()
-async def decide(ctx, option1="yes", option2="no"):
-        choice = random.randint(1,2)
-        await ctx.send(f" I Choose {choice}")
+async def decide(ctx, *args):
+        choice = random.randint(1,len(args))
+        await ctx.send(f" I Choose {args[choice]}")
 
 @client.command
 async def roll(ctx):
