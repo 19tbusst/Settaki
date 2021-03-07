@@ -13,7 +13,6 @@ async def on_ready():
     print(f'{client.user} has connected to Discord!')
 
 @client.event
-<<<<<<< HEAD
 async def on_member_join(member):
     print(f"{member} has joined {member.guild}")
 
@@ -38,38 +37,10 @@ async def flip(ctx):
 @client.command()
 async def decide(ctx, option1="yes", option2="no"):
         choice = random.randint(1,2)
-=======
-async def on_ready():
-    await client.change_presence(status = discord.Status.online, activity = discord.Game("Use .help for a list of commands"))
-    print("I am online")
-
-@client.command
-async def ping(ctx):
-	await ctx.send(f"Pong {round(client.latency)}ms")
 
 @client.command
 async def roll(ctx):
 	await ctx.send(f"You rolled {random.randint(1,6)}")
-
-@client.command
-async def decide(ctx, args*):
-	times = 0
-	decision = random.randint(1, len(args))
-	for i in args:
-		times += 1
-		if times == decision:
-			ctx.send(i)
-
-
-		
-
->>>>>>> d33dc12699fdcd815c12cbde85fc9f6add190d2d
-
-        if choice == 1:
-            await ctx.send(f"I Choose: {option1}")
-        
-        elif choice == 2:
-            await ctx.send(f"I Choose: {option2}")
 
 @client.command(aliases = ["8ball"])
 async def _8ball(ctx, *args):
@@ -105,3 +76,4 @@ async def echo(ctx, title, content):
     await ctx.send(embed = discord.Embed(title = title, description = content, color = 0xffae00))
     
 client.run(os.getenv("DISCORD_BOT_TOKEN"))
+clear.run("DISCORD_BOT_TOKEN")
